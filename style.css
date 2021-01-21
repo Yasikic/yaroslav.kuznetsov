@@ -1,106 +1,125 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans|Raleway:600');
+/* SET UP */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
 
-html{scroll-behavior: smooth;}
+:root {
+  --prime-color: #1ebdc2;
+  --second-color: #182761;
+}
+
 *{
-  box-sizing: border-box;
-  word-wrap: break-word;
+  background: white;
+  margin: 10px;
+  padding: 2px;
+  font-family: 'Roboto', sans-serif;
+  color: #757575;
+}
+
+html, body{
+  padding: 0;
   margin: 0;
+}
+.center{text-align: center;}
+.inline{display: inline;}
+
+.elevation-8dp {
+	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+/* DESKTOP */
+body{
+  display: grid;
+  grid-template-areas:
+    'prof educ educ'
+    'prof exp exp'
+    'footer footer footer'
+    'after after after';
+  background: #eceff1;
+  grid-gap: 10px;
+}
+
+aside{
+  grid-area: prof;
+  margin-left: 5vw;
   padding: 0;
 }
-body {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
 
-/* HEADER */
 header{
-  grid-area: header;
-  text-align: center;
-  background: #133072;
-  color: white;
-}
-h1{
-  font-family: 'Comfortaa', cursive;
-  padding: 10% 0 10% 0;
-}
-.top-bar{
-  padding: 1.5%;
-  background: #050831;
-  box-shadow: 0px 3px 2px 0px rgba(5,8,49,0.25);
-}
-.inline{
-  display: inline;
-  margin: 0.5%;
-}
-.nav-link, .social{
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  /*background: #3eeab88;*/
-  border: 1px solid coral;
-  padding: 1% 1.1%;
-}
-.nav-link:active{
-  border-bottom: 2px solid;
-  border-color: #f18a00;
+  position: relative;
+  background: url("photo_2020-09-21_22-32-24.jpg") no-repeat right bottom;
+  background-size: cover;
+  height: 25vh;
+  margin: 0 0 0 auto;
+  padding: 0 0 0 auto;
 }
 
-/* MAIN */
-main{
-  grid-area: main;
-}
-article{
-  max-width: 80%;
-  padding: 1%;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+header h2{
+  color: white;
+  background: rgba(0,0,0,0);
 }
 
-h3{font-family: 'Raleway', sans-serif;}
-dd{
-  padding-left: 2.5vw;
-  line-height: 1.25;
+.education{grid-area: educ;}
+
+.experience{grid-area: exp;}
+
+section{
+  background: white;
+  margin-right: 5vw;
+}
+
+h5{
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.date{
+  color: var(--prime-color);
+}
+
+.actual{
+  background: var(--prime-color);
+  color: white;
+}
+
+.fa{
+  color: var(--prime-color);
 }
 
 /* FOOTER */
 footer{
-/*#b73772;*/
   grid-area: footer;
+  margin: 0;
+  background: var(--prime-color);
+  padding: 0;
+}
+footer *{
+  background: inherit;
   color: white;
-  background:#050831;
-  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
-.contacts{
-  background:#415BA7;
-  padding: 1%;
-}
-.bottom-bar{
+footer a{text-decoration: none; color: inherit;}
 
-}
-.social{
-  max-width: auto;
-  padding: 0.5% 1%;
-}
-#copyright{
-  padding: 0.5% 1%;
+footer .fa{
+  color: inherit;
 }
 
-@media (max-width: 500px) {
-  body{font-size: 0.5rem;}
-  header{font-size: 0.5rem;}
-  .inline{
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  .social{
-    font-size: 0.5rem;
-    text-align: center;
-  }
+.copyright{
+  background: var(--second-color);
+}
+
+.after-all{
+  grid-area: after;
+}
+
+.colors span{
+  margin: 3px;
+  border: solid black 1px;
+  font-size:30px;
+  padding-left:30px;
+}
+
+/* MOBILE */
+@@media query {
+
 }
