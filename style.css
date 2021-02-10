@@ -7,7 +7,7 @@
 }
 
 *{
-  background: white;
+  background: #eceff1;
   margin: 10px;
   padding: 2px;
   font-family: 'Roboto', sans-serif;
@@ -33,9 +33,12 @@ body{
     'prof exp exp'
     'footer footer footer'
     'after after after';
-  background: #eceff1;
   grid-gap: 10px;
 }
+
+body *{
+  background: white;
+}	
 
 aside{
   grid-area: prof;
