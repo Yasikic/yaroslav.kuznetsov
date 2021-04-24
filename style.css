@@ -282,6 +282,8 @@ footer p{
     display: grid;
     grid-template-areas:
       'prof'
+      'skills'
+      'lang'
       'educ'
       'exp'
       'footer';
