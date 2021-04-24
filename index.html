@@ -8,52 +8,109 @@
     <!-- STYLE -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
     <!-- SCRIPT -->
     <script type="text/javascript" async src="script.js"></script>
   </head>
   <body>
 
-    <aside class="elevation-8dp">
+    <section class="profile left">
       <header>
-          <h2 class="center">Yaroslav Kuznetsov</h2>
+        <h2 class="center">Yaroslav Kuznetsov</h2>
       </header>
-      <div class="profile">
-        <p><i class="fa fa-info-circle fa-fw"></i> Entrepreneur, Financier, Developer</p>
-        <p><i class="fa fa-home fa-fw"></i> Moscow, Russia</p>
-        <p><i class="fa fa-envelope"></i> yaroslavkzntsv@yandex.ru</p>
-        <p><i class="fa fa-phone fa-fw"></i> +79057283366</p>
+      <div class="basic">
+        <p><i class="fas fa-info fa-fw"></i> Entrepreneur, Financier, Developer</p>
+        <p><i class="fas fa-home fa-fw"></i> Moscow, Russia</p>
+        <p><i class="fas fa-envelope fa-fw"></i> yaroslavkzntsv@yandex.ru</p>
+        <p><i class="fas fa-phone fa-fw"></i> +79057283366</p>
       </div>
-      <hr style="padding: 0; margin: 0;">
-      <div class="skills">
-        <h5><i class="fa fa-tools fa-fw"></i>Skills</h5>
-        <p>MS Excel</p>
-        <p>MS Word</p>
-        <p>MS PowerPoint</p>
-        <p>Bloomberg</p>
-        <p>R</p>
-        <p>Python 3</p>
-        <p>JavaScript</p>
-        <p>Financial Modelling</p>
+      <ul class="flex-container">
+        <li class="inline flex-item-left"><i class="fab fa-codepen" style="color: #131417;"></i><a href="https://codepen.io/yasikic" target="_blank">Codepen</a></li>
+        <li class="inline flex-item-center"><i class="fab fa-github"  style="color: #24292e;"></i><a href="https://github.com/Yasikic" target="_blank">Github</a></li>
+        <li class="inline flex-item-right"><i class="fab fa-linkedin" style="color: #0e76a8;"></i><a href="https://www.linkedin.com/in/yaroslav-kuznetsov" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+    <section class="skills left">
+      <h2><i class="fas fa-laptop-code fa-fw"></i>Skills</h2>
+      <div class="skill-bars">
+          <div class="bar">
+            <div class="info">
+              <span>HTML</span>
+            </div>
+            <div class="progress-line html">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>CSS</span>
+            </div>
+            <div class="progress-line css">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>MS Office</span>
+            </div>
+            <div class="progress-line office">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>R</span>
+            </div>
+            <div class="progress-line r">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>Bloomberg</span>
+            </div>
+            <div class="progress-line bloomberg">
+              <span></span>
+            </div>
+          </div>
       </div>
-      <div class="lang">
-        <h5><i class="fa fa-globe fa-fw"></i>Languages</h5>
-        <p>English (C1)</p>
-        <p>Russian (native)</p>
-      </div>
-      <div class="portfolio">
-        <h5> <i class="fa fa-briefcase"></i>Portfolio</h5>
-        <p>What should I say? Link</p>
-      </div>
-    </aside>
+      </section>
 
-      <section class="education elevation-8dp">
-        <h2><i class="fa fa-certificate fa-fw"></i>Education</h2>
-        <div>
-          <h5>Warwick Business School, Coventry, UK
-            <img src="https://www.wbs.ac.uk/wbs2012/includes/themes/wbs/img/header/wbs_warwick_logo.png" style="transform: translate(0, 50%); margin: 0.5rem;" alt="" height="70">
+      <section class="lang left">
+        <h2><i class="fas fa-globe fa-fw"></i>Languages</h2>
+        <div class="skill-bars">
+            <div class="bar">
+              <div class="info">
+                <span>English / C1</span>
+              </div>
+              <div class="progress-line eng">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>Russian / Native</span>
+              </div>
+              <div class="progress-line rus">
+                <span></span>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!-- <section class="portfolio">
+        <h2 style="margin: 0 0 0 16px"> <i class="fas fa-briefcase fa-fw"></i>Portfolio</h2>
+        <p class="smallmargin">What should I say? Link</p>
+      </section> -->
+
+
+      <section class="education right">
+        <h2><i class="fas fa-certificate fa-fw"></i>Education</h2>
+        <div style="margin-bottom: -25px;">
+          <h5 style="margin: 0">Warwick Business School, Coventry, UK
+              <img src="https://www.jobs.ac.uk/enhanced/employer/university-of-warwick/images/default-logo.png" style="transform: translate(0, 25%); margin: 0 0.5rem;" alt="" height="50">
           </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Sep 2019 – Dec 2020</p>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Sep 2019 – Dec 2020</p>
           <ul>
             <li>MSc in Finance. Grade 55.8 / 100</li>
             <li>Modules: Corporate Finance, Big Data Analytics, Investment Management, Empirical Finance</li>
@@ -61,25 +118,25 @@
           </ul>
         </div>
         <div>
-          <h5>Financial University, Moscow, Russia
-            <img src="https://en.fa.ru/local/templates/empty/img/svg/logo.svg" style="transform: translate(0, 50%); margin: 0.5rem;" alt="" height="50">
+          <h5 style="margin: 0">Financial University, Moscow, Russia
+            <img src="https://en.fa.ru/local/templates/empty/img/svg/logo.svg" style="transform: translate(0, 25%); margin: 0.5rem;" alt="" height="50">
           </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Sep 2015 – Jun 2019</p>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Sep 2015 – Jun 2019</p>
           <ul>
-            <li>BSc in International Finance. Grade 4.8 / 5.0. (First Class Honours)</li>
-            <li>Modules: Financial Markets, Management Accounting, Corporate Finance, Financial</li>
+            <li>BSc in International Finance. Grade 4.8 / 5 (First Class Honours)</li>
+            <li>Modules: Financial Markets, Management Accounting, Corporate Finance, Audit and Assurance</li>
             <li>Thesis: “Implementation of altcoins as the reserve currency”</li>
-            <li>Awards: First-degree diploma, winner of the International Scientific Congress VIII and XI</li>
+            <li>Awards: First-degree diplomas, winner of the International Scientific Congresses VIII and XI</li>
           </ul>
         </div>
       </section>
 
-      <section class="experience elevation-8dp">
-        <h2><i class="fa fa-suitcase fa-fw"></i>Work Experience</h2>
+      <section class="experience right">
+        <h2><i class="fas fa-suitcase fa-fw"></i>Work Experience</h2>
         <div>
-          <h5>CFO / TRAKT LLC (microentreprise), Moscow, Russia
+          <h5 style="margin: 25px 0 0 0">CFO / TRAKT LLC (microentreprise), Moscow, Russia
           </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Dec 2020 – <span class="actual">present</span></p>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Dec 2020 – <span class="actual">present</span></p>
           <ul>
             <li>Oversight of 6 people under my management</li>
             <li>Concluded new contract agreements (BAT Russia, JTI Russia, Coca-Cola Russia, HQD)</li>
@@ -88,21 +145,19 @@
             <li>Optimised firm’s financial cycle</li>
           </ul>
         </div>
-        <div>
-          <h5>Financial analyst / UniFactor Ltd. (factoring business), Moscow, Russia
-            <img src="https://unifactoring.ru/images/Logo-en-horizontal.png" style="background: #00527c; transform: translate(0, 50%); margin: 0.5rem;" alt="" height="25">
-          </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Oct 2020 – Dec 2020</p>
+        <div style="margin-bottom: -25px;">
+          <h5 style="margin: 0">Financial analyst / UniFactor Ltd. (factoring business), Moscow, Russia</h5>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Oct 2020 – Dec 2020</p>
           <ul>
             <li>Prepared Strategy 2021 presentation for investors</li>
             <li>Developed DCF model for the new business project</li>
           </ul>
         </div>
         <div>
-          <h5>Research assistant / Ministry of Finance, Financial Research Institute, Moscow, Russia
+          <h5 style="margin: 0">Research assistant / Ministry of Finance, Financial Research Institute, Moscow, Russia
             <img src="https://nifi.ru/images/logo-en.svg" style="transform: translate(0, 50%); margin: 0.5rem;" alt="" height="27">
           </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Feb 2019 – Sep 2020</p>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Feb 2019 – Sep 2020</p>
           <ul>
             <li>Worked in Analytical centre for financial research</li>
             <li>Forecasted monthly returns of Ripple</li>
@@ -111,18 +166,16 @@
           </ul>
         </div>
         <div>
-          <h5>Intern / UniFactor Ltd. (factoring business), Moscow, Russia
-            <img src="https://unifactoring.ru/images/Logo-en-horizontal.png" style="background: #00527c; transform: translate(0, 50%); margin: 0.5rem;" alt="" height="25">
-          </h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Nov 2018 – Jan 2019</p>
+          <h5 style="margin: 0">Intern / UniFactor Ltd. (factoring business), Moscow, Russia</h5>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Nov 2018 – Jan 2019</p>
           <ul>
             <li>Participated in organising 2 conferences by communicating with partners and contractors</li>
             <li>Contacted 50 potential factoring partners in the commercial banking sphere</li>
           </ul>
         </div>
         <div>
-          <h5>Volunteer / UNICRY (cybersecurity SaaS startup), Moscow, Russia</h5>
-          <p class="date"><i class="fa fa-calendar fa-fw"></i>Jul 2018 – Nov 2018</p>
+          <h5 style="margin: 0">Volunteer / UNICRY (cybersecurity SaaS startup), Moscow, Russia</h5>
+          <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Jul 2018 – Nov 2018</p>
           <ul>
             <li>Prepared income statement and financial position for the investor pitch</li>
             <li>Explored SaaS in cybersecurity and anti-phishing</li>
@@ -130,16 +183,8 @@
         </div>
       </section>
 
-    <footer class="contacts">
-      <p class="center">Connect with me on</p>
-        <ul class="center">
-          <li class="inline"><i class="fa fa-codepen"></i><a href="#">Codepen</a></li>
-          <li class="inline"><i class="fa fa-github"></i><a href="#">Github</a></li>
-          <li class="inline"><i class="fa fa-linkedin"></i><a href="#">LinkedIn</a></li>
-        </ul>
-      <div class="copyright">
-        <p>The website is under construction. © Copyright 2020 Richard</p>
-      </div>
+    <footer class="copyright">
+      <p>The website is under construction. © Copyright 2020 Richard</p>
     </footer>
   </body>
 </html>
