@@ -1,5 +1,5 @@
 /* SET UP */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 :root {
   --prime-color: #1ebdc2;
@@ -8,118 +8,265 @@
 
 *{
   background: #eceff1;
-  margin: 10px;
-  padding: 2px;
   font-family: 'Roboto', sans-serif;
   color: #757575;
 }
 
-html, body{
-  padding: 0;
-  margin: 0;
-}
+/* Variable classes */
 .center{text-align: center;}
 .inline{display: inline;}
+.date{color: var(--prime-color);}
 
-.elevation-8dp {
-	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+.actual{
+  background: var(--prime-color);
+  color: white;
+  padding: 0 2px 0 1px;
 }
+
+.fas, .far, .fab {
+  color: var(--prime-color);
+  margin: 0 5px 0 5px;
+}
+
+.left{margin-left: 3vw;}
+.right{margin-right: 3vw;}
+
+.left p, li, span{
+  font-size: 17px;
+}
+
+/* Grid areas */
+.profile    {grid-area: prof;}
+.skills     {grid-area: skills;}
+.lang       {grid-area: lang;}
+.education  {grid-area: educ;}
+.experience {grid-area: exp;}
 
 /* DESKTOP */
 body{
+  margin: 0;
   display: grid;
   grid-template-areas:
     'prof educ educ'
-    'prof exp exp'
-    'footer footer footer'
-    'after after after';
-  grid-gap: 10px;
+    'skills exp exp'
+    'lang exp exp'
+    'footer footer footer';
+  grid-column-gap: 2vw;
 }
 
 body *{
   background: white;
-}	
-
-aside{
-  grid-area: prof;
-  margin-left: 5vw;
-  padding: 0;
 }
 
+section{
+  margin-top: 20px;
+  margin-bottom: 0;
+  /* padding-left: 20px; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+section h2{
+  padding-left: 10px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+section h5{
+  padding-left: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+p, li, span{
+  font-weight: 300;
+}
+
+/* Left side */
 header{
   position: relative;
   background: url("photo_2020-09-21_22-32-24.jpg") no-repeat right bottom;
   background-size: cover;
   height: 25vh;
-  margin: 0 0 0 auto;
-  padding: 0 0 0 auto;
+  border-radius: 10px 10px 0 0;
 }
 
 header h2{
   color: white;
   background: rgba(0,0,0,0);
+  margin-top: 0;
+  padding-top: 10%;
 }
 
-.education{grid-area: educ;}
+.basic p{padding-left: 15px;}
 
-.experience{grid-area: exp;}
-
-section{
-  background: white;
-  margin-right: 5vw;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* text-align: center; */
+  padding-left: 10px;
 }
 
-h5{
-  font-size: 1.1rem;
-  font-weight: bolder;
+.flex-item-left, .flex-item-center, .flex-item-right {
+  /* background-color: #f1f1f1; */
+  padding: 10px;
+  flex: 100%;
 }
 
-.date{
-  color: var(--prime-color);
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
 }
 
-.actual{
+/* Right side */
+
+.experience div:last-child{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+::selection{
+  color: #fff;
   background: var(--prime-color);
-  color: white;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--prime-color);
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 40%;
+}
+.bar .progress-line.office span{
+  width: 85%;
+}
+.bar .progress-line.r span{
+  width: 50%;
+}
+.bar .progress-line.bloomberg span{
+  width: 75%;
+}
+.bar .progress-line.eng span{
+  width: 80%;
+}
+.bar .progress-line.rus span{
+  width: 100%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: var(--second-color);
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: var(--second-color);
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "40%";
+}
+.progress-line.office span::after{
+  content: "85%";
+}
+.progress-line.r span::after{
+  content: "50%";
+}
+.progress-line.bloomberg span::after{
+  content: "75%";
+}
+.progress-line.eng span::after{
+  content: "80%";
+}
+.progress-line.rus span::after{
+  content: "100%";
 }
 
-.fa{
-  color: var(--prime-color);
-}
-
-/* FOOTER */
+/* Footer */
 footer{
   grid-area: footer;
-  margin: 0;
-  background: var(--prime-color);
-  padding: 0;
+  background: var(--second-color);
+  margin-top: 25px;
 }
-footer *{
+footer p{
   background: inherit;
   color: white;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-footer a{text-decoration: none; color: inherit;}
-
-footer .fa{
-  color: inherit;
-}
-
-.copyright{
-  background: var(--second-color);
-}
-
-.after-all{
-  grid-area: after;
-}
-
-.colors span{
-  margin: 3px;
-  border: solid black 1px;
-  font-size:30px;
-  padding-left:30px;
 }
 
 /* MOBILE */
@@ -137,8 +284,7 @@ footer .fa{
       'prof'
       'educ'
       'exp'
-      'footer'
-      'after';
+      'footer';
     background: #eceff1;
     grid-gap: 5px;
   }
