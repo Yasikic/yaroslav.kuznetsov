@@ -3,7 +3,28 @@
 
 :root {
   --prime-color: #1ebdc2;
-  --second-color: #182761;
+  --second-color: #1a237e;
+  /* color: ; */
+  /*
+  hsla(240,64%,27%, 1)
+  #0D0D3D
+
+  #6699CC
+  #88B0D7
+  Baby Blue
+#C3E0E5
+
+Dark Blue
+#274472
+
+Blue Gray
+#5885AF
+
+Midnight Blue
+#41729F
+#191970
+#1a237e
+  */
 }
 
 /* @link https://utopia.fyi/type/calculator?c=411,16,1.2,1503,18,1.25,5,2,411&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
@@ -90,26 +111,51 @@
 }
 
 /* Variable classes */
-.center{text-align: center;}
-.inline{display: inline;}
-.date{color: var(--prime-color);}
+.center{
+  text-align: center;
+}
+.inline{
+  display: inline;
+}
+.date{
+  color: var(--second-color);
+}
 
 .actual{
-  background: var(--prime-color);
+  background: var(--second-color);
   color: white;
   padding: 0 2px 0 1px;
 }
 
-.fas, .far, .fab {
-  color: var(--prime-color);
+.fas,
+.far,
+.fab {
+  color: var(--second-color);
   margin: 0 5px 0 5px;
 }
 
-.left{margin-left: 3vw;}
-.right{margin-right: 3vw;}
+.left{
+  margin-left: 3vw;
+}
+.right{
+  margin-right: 3vw;
+}
 
-.left p, li, span{
+.left p,
+li,
+span{
   font-size: var(--step-0);
+}
+
+.btn{
+  border-bottom: 2px solid transparent;
+  padding: .25rem .5rem;
+  text-decoration: none;
+  transition: border-bottom-color .3s ease-in-out;
+}
+
+.btn:hover{
+  border-bottom-color: var(--second-color);
 }
 
 /* Grid areas */
@@ -158,7 +204,9 @@ section h5{
   margin: 2.5vh 0 0 0;
 }
 
-p, li, span{
+p,
+li,
+span{
   font-weight: 300;
 }
 
@@ -178,22 +226,35 @@ p, li, span{
 }
 
 /* Left side */
+
 header{
   position: relative;
+  height: 25vh;
+  background: black;
+}
+.image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
   background: url("photo_2020-09-21_22-32-24.jpg") no-repeat right bottom;
   background-size: cover;
-  height: 25vh;
-  border-radius: 10px 10px 0 0;
 }
 
 header h2{
+  position: absolute;
+  white-space: nowrap;
   color: white;
   background: rgba(0,0,0,0);
-  margin-top: 0;
-  padding-top: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
 }
 
-.basic p{padding-left: 15px;}
+.basic p{
+  padding-left: 15px;
+}
 
 .flex-container {
   display: flex;
@@ -201,7 +262,9 @@ header h2{
   padding-left: 10px;
 }
 
-.flex-item-left, .flex-item-center, .flex-item-right {
+.flex-item-left,
+.flex-item-center,
+.flex-item-right {
   padding: 10px;
   flex: 100%;
 }
@@ -213,17 +276,11 @@ header h2{
   }
 }
 
-/* .button{
-  text-decoration: none;
-  border: 1px solid black;
-
-}*/
-
 /* Right side */
 
 ::selection{
   color: #fff;
-  background: var(--prime-color);
+  background: var(--second-color);
 }
 .skill-bars{
   padding: 25px 30px;
@@ -273,7 +330,7 @@ header h2{
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
-  background: var(--prime-color);
+  background: var(--second-color);
   animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 .bar .progress-line.html span{
