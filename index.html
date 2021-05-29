@@ -14,31 +14,54 @@
     <script type="text/javascript" async src="script.js"></script>
   </head>
   <body>
+    <!--
+    ===========================
+          PAGE LEFT SIDE
+    ===========================
+    -->
 
+    <!-- PROFILE -->
     <section class="profile left">
       <header>
         <div class="image">
         </div>
         <h2 class="center">Yaroslav Kuznetsov</h2>
       </header>
-      <div class="basic">
-        <p><i class="fas fa-info fa-fw"></i> Entrepreneur, Financier, Developer</p>
-        <p><i class="fas fa-home fa-fw"></i> Moscow, Russia</p>
-        <p><i class="fas fa-envelope fa-fw"></i> yaroslavkzntsv@yandex.ru</p>
-        <p><i class="fas fa-phone fa-fw"></i> +79057283366</p>
+      <div class="basic link-anim">
+        <p>
+          <i class="fas fa-info fa-fw"></i>
+          Entrepreneur, Financier, Developer
+        </p>
+        <p>
+          <i class="fas fa-home fa-fw"></i>
+          Moscow, Russia
+        </p>
+        <p>
+          <i class="fas fa-envelope fa-fw"></i>
+          <a href="mailto:yaroslavkzntsv@yandex.ru" class="hover">
+            yaroslavkzntsv@yandex.ru</a>
+        </p>
+        <p>
+          <i class="fas fa-phone fa-fw"></i>
+          <a href="tel:+7(905)7283366" class="hover" data-contacttype="phone">
+            +7 (905) 728 33 66
+          </a>
+        </p>
       </div>
-      <ul class="flex-container">
-        <li class="inline flex-item-left "><i class="fab fa-codepen" style="color: #131417;"></i>
-          <a class="btn" href="https://codepen.io/yasikic" target="_blank">Codepen</a>
+      <ul class="flex-container link-anim">
+        <li class="inline flex-item-left "><i class="fab fa-codepen"></i>
+          <a class="hover" href="https://codepen.io/yasikic" target="_blank">Codepen</a>
         </li>
-        <li class="inline flex-item-center "><i class="fab fa-github"  style="color: #24292e;"></i>
-          <a class="btn" href="https://github.com/Yasikic" target="_blank">Github</a>
+        <li class="inline flex-item-center "><i class="fab fa-github"></i>
+          <a class="hover" href="https://github.com/Yasikic" target="_blank">Github</a>
         </li>
-        <li class="inline flex-item-right "><i class="fab fa-linkedin" style="color: #0e76a8;"></i>
-          <a class="btn" href="https://www.linkedin.com/in/yaroslav-kuznetsov" target="_blank">LinkedIn</a>
+        <li class="inline flex-item-right "><i class="fab fa-linkedin"></i>
+          <a class="hover" href="https://www.linkedin.com/in/yaroslav-kuznetsov" target="_blank">LinkedIn</a>
         </li>
       </ul>
     </section>
+
+    <!-- SKILLS -->
     <section class="skills left">
       <h2><i class="fas fa-laptop-code fa-fw"></i>Skills</h2>
       <div class="skill-bars">
@@ -47,7 +70,7 @@
               <span>HTML</span>
             </div>
             <div class="progress-line html">
-              <span></span>
+              <span class="pgl"></span>
             </div>
           </div>
           <div class="bar">
@@ -55,7 +78,7 @@
               <span>CSS</span>
             </div>
             <div class="progress-line css">
-              <span></span>
+              <span class="pgl"></span>
             </div>
           </div>
           <div class="bar">
@@ -63,7 +86,7 @@
               <span>MS Office</span>
             </div>
             <div class="progress-line office">
-              <span></span>
+              <span class="pgl"></span>
             </div>
           </div>
           <div class="bar">
@@ -71,7 +94,7 @@
               <span>R</span>
             </div>
             <div class="progress-line r">
-              <span></span>
+              <span class="pgl"></span>
             </div>
           </div>
           <div class="bar">
@@ -79,12 +102,13 @@
               <span>Bloomberg</span>
             </div>
             <div class="progress-line bloomberg">
-              <span></span>
+              <span class="pgl"></span>
             </div>
           </div>
       </div>
       </section>
 
+    <!-- LANGUAGES -->
       <section class="lang left">
         <h2><i class="fas fa-globe fa-fw"></i>Languages</h2>
         <div class="skill-bars">
@@ -93,7 +117,7 @@
                 <span>English / C1</span>
               </div>
               <div class="progress-line eng">
-                <span></span>
+                <span class="pgl"></span>
               </div>
             </div>
             <div class="bar">
@@ -101,7 +125,7 @@
                 <span>Russian / Native</span>
               </div>
               <div class="progress-line rus">
-                <span></span>
+                <span class="pgl"></span>
               </div>
             </div>
         </div>
@@ -111,33 +135,36 @@
         <p class="smallmargin">What should I say? Link</p>
       </section> -->
 
+      <!--
+      ===========================
+            PAGE RIGHT SIDE
+      ===========================
+      -->
 
+    <!-- EDUCATION -->
       <section class="education right">
         <h2><i class="fas fa-certificate fa-fw"></i>Education</h2>
         <div>
-          <!-- style="margin-bottom: -25px;" -->
-          <h5>Warwick Business School
-              <!-- <img src="https://www.jobs.ac.uk/enhanced/employer/university-of-warwick/images/default-logo.png" style="transform: translate(0, 25%); margin: 0 0.5rem;" alt="" height="50"> -->
+          <h5 class="link-anim"><a class="hover" href="https://www.wbs.ac.uk/" target="_blank">Warwick Business School</a>
           </h5>
           <div class="details">
             <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Coventry, United Kingdom</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Sep 2019 – Dec 2020</p>
           </div>
-          <ul>
+          <ul class="list">
             <li>MSc in Finance. Grade 55.8 / 100</li>
             <li>Modules: Corporate Finance, Big Data Analytics, Investment Management, Empirical Finance</li>
             <li>Thesis: “Transaction costs and the FX carry trade”</li>
           </ul>
         </div>
         <div>
-          <h5>Financial University
-            <!-- <img src="https://en.fa.ru/local/templates/empty/img/svg/logo.svg" style="transform: translate(0, 25%); margin: 0.5rem;" alt="" height="50"> -->
+          <h5 class="link-anim"><a class="hover" href="https://en.fa.ru/" target="_blank">Financial University</a>
           </h5>
           <div class="details">
             <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Sep 2015 – Jun 2019</p>
           </div>
-          <ul>
+          <ul class="list">
             <li>BSc in International Finance. Grade 4.8 / 5 (First Class Honours)</li>
             <li>Modules: Financial Markets, Management Accounting, Corporate Finance, Audit and Assurance</li>
             <li>Thesis: “Implementation of altcoins as the reserve currency”</li>
@@ -146,27 +173,27 @@
         </div>
       </section>
 
+    <!-- EXPERIENCE -->
       <section class="experience right">
         <h2><i class="fas fa-suitcase fa-fw"></i>Work Experience</h2>
         <div>
-          <!-- style="margin-top: 25px;" -->
           <h5>CEO / TRAKT Convenience LLC.
           </h5>
           <div class="details">
-            <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow Region, Russia</p>
+            <p><i class="fas fa-map-marker-alt fa-fw"></i>Moscow Region, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Apr 2021 – <span class="actual">present</span></p>
           </div>
-          <ul>
+          <ul class="list">
              <!--<li> </li> -->
           </ul>
         </div>
         <div>
           <h5>CFO / TRAKT LLC.</h5>
           <div class="details">
-            <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow Region, Russia</p>
+            <p><i class="fas fa-map-marker-alt fa-fw"></i>Moscow Region, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Dec 2020 – <span class="actual">present</span></p>
           </div>
-          <ul>
+          <ul class="list">
             <li>Oversight of 6 people under my management</li>
             <li>Concluded new contract agreements (BAT Russia, JTI Russia, Coca-Cola Russia, HQD)</li>
             <li>Controled the transition into new tax system</li>
@@ -177,23 +204,22 @@
         <div>
           <h5>Financial analyst / UniFactor Ltd.</h5>
           <div class="details">
-            <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
+            <p><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Oct 2020 – Dec 2020</p>
           </div>
-          <ul>
+          <ul class="list">
             <li>Prepared Strategy 2021 presentation for investors</li>
             <li>Developed DCF model for the new business project</li>
           </ul>
         </div>
         <div>
-          <h5>Research assistant / Financial Research Institute
-            <!-- <img src="https://nifi.ru/images/logo-en.svg" style="transform: translate(0, 50%); margin: 0.5rem;" alt="" height="27"> -->
+          <h5 class="link-anim"><a class="hover" href="https://nifi.ru/en/" target="_blank">Research assistant / Financial Research Institute</a>
           </h5>
           <div class="details">
-            <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
+            <p><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Feb 2019 – Sep 2020</p>
           </div>
-          <ul>
+          <ul class="list">
             <li>Worked in Analytical centre for financial research</li>
             <li>Forecasted monthly returns of Ripple</li>
             <li>Initiated NIFI Endowment Fund project</li>
@@ -203,10 +229,10 @@
         <div>
           <h5>Intern / UniFactor Ltd.</h5>
           <div class="details">
-            <p class="#"><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
+            <p><i class="fas fa-map-marker-alt fa-fw"></i>Moscow, Russia</p>
             <p class="date"><i class="far fa-calendar-alt fa-fw"></i>Nov 2018 – Jan 2019</p>
           </div>
-          <ul>
+          <ul class="list">
             <li>Participated in organising 2 conferences by communicating with partners and contractors</li>
             <li>Contacted 50 potential factoring partners in the commercial banking sphere</li>
           </ul>
@@ -221,8 +247,20 @@
         </div>-->
       </section>
 
+      <!--
+      ===========================
+            FOOTER
+      ===========================
+      -->
+
     <footer class="copyright">
-      <p>The website is under construction. © Copyright 2021 Yaroslav Kuznetsov</p>
+      <p>© Copyright 2021 Yaroslav Kuznetsov</p>
     </footer>
+    <!-- <div class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox" onclick="myFunction()">
+        <span class="slider"></span>
+      </label>
+    <!-- </div> -->
   </body>
 </html>
