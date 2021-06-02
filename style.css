@@ -1,33 +1,412 @@
-/* SET UP */
+/*
+===========================
+      SET UP
+===========================
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 :root {
   --prime-color: #1ebdc2;
-  --second-color: #1a237e;
-  /* color: ; */
-  /*
-  hsla(240,64%,27%, 1)
-  #0D0D3D
-
-  #6699CC
-  #88B0D7
-  Baby Blue
-#C3E0E5
-
-Dark Blue
-#274472
-
-Blue Gray
-#5885AF
-
-Midnight Blue
-#41729F
-#191970
-#1a237e
-  */
+  --mdn-blue: #1a237e;
+  --neutral-gray: #757575;
+  --pure-white: white;
+  --ice-smoke: #eceff1;
+  --sky-blue: #64b5f6;
+  --yellow: #ffeb3b;
+  --orange: #ffc107;
 }
 
-/* @link https://utopia.fyi/type/calculator?c=411,16,1.2,1503,18,1.25,5,2,411&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+html{
+  background: var(--ice-smoke);
+  font-family: 'Roboto', sans-serif;
+  color: var(--neutral-gray);
+}
+
+/* Variable classes */
+.center{
+  text-align: center;
+}
+.inline{
+  display: inline;
+}
+.date{
+  color: var(--mdn-blue);
+}
+
+.actual{
+  background: var(--mdn-blue);
+  color: var(--pure-white);
+  padding: 0 2px 0 1px;
+}
+
+.fas,
+.far,
+.fab {
+  color: var(--mdn-blue);
+  margin: 0 5px 0 5px;
+}
+
+.left{
+  margin-left: 3vw;
+}
+.right{
+  margin-right: 3vw;
+}
+
+/* Grid areas */
+.profile    {grid-area: prof;}
+.skills     {grid-area: skills;}
+.lang       {grid-area: lang;}
+.education  {grid-area: educ;}
+.experience {grid-area: exp;}
+
+/*
+===========================
+      DESKTOP
+===========================
+*/
+
+body{
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    'prof educ educ'
+    'skills exp exp'
+    'lang exp exp'
+    'footer footer footer';
+  grid-column-gap: 2vw;
+}
+
+section{
+  margin-top: 20px;
+  margin-bottom: 0;
+  border-radius: 20px;
+  background: var(--pure-white);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+section h2{
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: var(--step-2);
+  margin-block-start: 0.83em;
+  margin-block-end: 0.2em;
+}
+
+section h5{
+  padding-left: 10px;
+  font-size: var(--step-1);
+  font-weight: 500;
+  margin: 3vh 0 0 0;
+}
+
+p,
+li,
+span{
+  font-size: var(--step-0);
+  font-weight: 300;
+}
+
+/*
+===========================
+      LEFT SIDE
+===========================
+*/
+
+header{
+  position: relative;
+  height: 25vh;
+  background: black;
+}
+
+.image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: url("photo_2020-09-21_22-32-24.jpg") no-repeat right bottom;
+  background-size: cover;
+}
+
+header h2{
+  position: absolute;
+  white-space: nowrap;
+  color: var(--pure-white);
+  background: rgba(0,0,0,0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+
+.basic p{
+  padding-left: 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.flex-item-left,
+.flex-item-center,
+.flex-item-right {
+  padding: 10px;
+  flex: 100%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+
+/*
+===========================
+      RIGHT SIDE
+===========================
+*/
+
+.details{
+  margin-block-start: 0.75em;
+  margin-block-end: 0.75em;
+}
+
+.right p{
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+}
+
+.list{
+  margin-block-start: 0.75em;
+  margin-block-end: 2em;
+  line-height: 1.5rem;
+}
+
+/*
+===========================
+=========        ==========
+========= FOOTER ==========
+=========        ==========
+===========================
+*/
+
+footer{
+  grid-area: footer;
+  background: var(--mdn-blue);
+  margin-top: 25px;
+}
+footer p{
+  background: inherit;
+  color: var(--pure-white);
+  padding-left: 1em;
+}
+
+/*
+===========================
+      EXTRAS
+===========================
+*/
+
+.switch {
+  position: absolute;
+  top: 25px;
+  right: 5vw;
+  background: transparent;
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* SOCIAL MEDIA */
+.fa-codepen  {color: #131417;}
+.fa-github   {color: #24292e;}
+.fa-linkedin {color: #0e76a8;}
+
+/* SELECTION */
+::selection{
+  color: var(--pure-white);
+  background: var(--mdn-blue);
+}
+
+/* BUTTONS */
+.link-anim a {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.link-anim a:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0px;
+  height: 2px;
+  margin: 2px 0 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  background-color: var(--mdn-blue);
+  left: 0;
+}
+
+.link-anim a:link,
+.link-anim a:hover,
+.link-anim a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-anim a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* SKILL BARS */
+.skill-bars{
+  padding: 25px 30px;
+  width: auto;
+  background: transparent;
+  border-radius: 10px 10px 0 0;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-size: var(--step-0);
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: var(--ice-smoke);
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--mdn-blue);
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 40%;
+}
+.bar .progress-line.office span{
+  width: 85%;
+}
+.bar .progress-line.r span{
+  width: 50%;
+}
+.bar .progress-line.bloomberg span{
+  width: 75%;
+}
+.bar .progress-line.eng span{
+  width: 90%;
+}
+.bar .progress-line.rus span{
+  width: 100%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: var(--mdn-blue);
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: var(--mdn-blue);
+  color: var(--pure-white);
+  padding: 1px 8px;
+  font-size: var(--step-0);
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "40%";
+}
+.progress-line.office span::after{
+  content: "85%";
+}
+.progress-line.r span::after{
+  content: "50%";
+}
+.progress-line.bloomberg span::after{
+  content: "75%";
+}
+.progress-line.eng span::after{
+  content: "90%";
+}
+.progress-line.rus span::after{
+  content: "100%";
+}
+
+/* UTOPIA FLUID TYPOGRAPHY */
+@media screen and (min-width: 1503px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
 
 :root {
   --fluid-min-width: 411;
@@ -38,15 +417,7 @@ Midnight Blue
     (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
       (var(--fluid-max-width) - var(--fluid-min-width))
   );
-}
 
-@media screen and (min-width: 1503px) {
-  :root {
-    --fluid-screen: calc(var(--fluid-max-width) * 1px);
-  }
-}
-
-:root {
   --f--2-min: 11.11;
   --f--2-max: 11.52;
   --step--2: calc(
@@ -103,331 +474,67 @@ Midnight Blue
       var(--fluid-bp)
   );
 }
+/* @link https://utopia.fyi/type/calculator?c=411,16,1.2,1503,18,1.25,5,2,411&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
-*{
-  background: #eceff1;
-  font-family: 'Roboto', sans-serif;
-  color: #757575;
-}
+/*
+===========================
+      DARK MODE
+===========================
+*/
 
-/* Variable classes */
-.center{
-  text-align: center;
-}
-.inline{
-  display: inline;
-}
-.date{
-  color: var(--second-color);
+.dark-mode {
+  background-color: #23282a;
+  color: var(--ice-smoke);
 }
 
-.actual{
-  background: var(--second-color);
-  color: white;
-  padding: 0 2px 0 1px;
+.dark-icons {
+  color: var(--orange);
 }
 
-.fas,
-.far,
-.fab {
-  color: var(--second-color);
-  margin: 0 5px 0 5px;
+.dark-mode::marker{
+  color: var(--orange);
 }
 
-.left{
-  margin-left: 3vw;
-}
-.right{
-  margin-right: 3vw;
+.dark-mode-footer,
+.dark-hover.hover:after {
+  background-color: var(--orange);
 }
 
-.left p,
-li,
-span{
-  font-size: var(--step-0);
+.dark-actual,
+.dark-pgl.pgl::after {
+  color: #0C2D48;
+  background-color: var(--orange);
 }
 
-.btn{
-  border-bottom: 2px solid transparent;
-  padding: .25rem .5rem;
-  text-decoration: none;
-  transition: border-bottom-color .3s ease-in-out;
+.dark-pgl.pgl::before {
+  border-top-color: var(--orange);
 }
 
-.btn:hover{
-  border-bottom-color: var(--second-color);
+.dark-pgl {
+  background: var(--orange)!important;
 }
 
-/* Grid areas */
-.profile    {grid-area: prof;}
-.skills     {grid-area: skills;}
-.lang       {grid-area: lang;}
-.education  {grid-area: educ;}
-.experience {grid-area: exp;}
-
-/* DESKTOP */
-body{
-  margin: 0;
-  display: grid;
-  grid-template-areas:
-    'prof educ educ'
-    'skills exp exp'
-    'lang exp exp'
-    'footer footer footer';
-  grid-column-gap: 2vw;
+.dark-mode-section {
+  background-color: #0C2D48;
+  /* #00546f var(--orange);*/
 }
 
-body *{
-  background: white;
+.dark-mode-footer p{
+  color: #0C2D48;
 }
 
-section{
-  margin-top: 20px;
-  margin-bottom: 0;
-  border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
+/*
+===========================
+      MOBILE
+===========================
+*/
 
-section h2{
-  padding-left: 10px;
-  font-weight: 700;
-  font-size: var(--step-2);
-  margin-block-start: 0.83em;
-  margin-block-end: 0.2em;
-}
-
-section h5{
-  padding-left: 10px;
-  font-size: var(--step-1);
-  font-weight: 500;
-  margin: 2.5vh 0 0 0;
-}
-
-p,
-li,
-span{
-  font-weight: 300;
-}
-
-.details{
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-}
-
-.right p{
-  margin-block-start: 0.3em;
-  margin-block-end: 0.3em;
-}
-
-.right ul{
-  margin-block-start: 0.5em;
-  margin-block-end: 2em;
-}
-
-/* Left side */
-
-header{
-  position: relative;
-  height: 25vh;
-  background: black;
-}
-.image{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  background: url("photo_2020-09-21_22-32-24.jpg") no-repeat right bottom;
-  background-size: cover;
-}
-
-header h2{
-  position: absolute;
-  white-space: nowrap;
-  color: white;
-  background: rgba(0,0,0,0);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
-}
-
-.basic p{
-  padding-left: 15px;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px;
-}
-
-.flex-item-left,
-.flex-item-center,
-.flex-item-right {
-  padding: 10px;
-  flex: 100%;
-}
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
-}
-
-/* Right side */
-
-::selection{
-  color: #fff;
-  background: var(--second-color);
-}
-.skill-bars{
-  padding: 25px 30px;
-  width: auto;
-  background: #fff;
-  border-radius: 10px 10px 0 0;
-}
-.skill-bars .bar{
-  margin: 20px 0;
-}
-.skill-bars .bar:first-child{
-  margin-top: 0px;
-}
-.skill-bars .bar .info{
-  margin-bottom: 5px;
-}
-.skill-bars .bar .info span{
-  font-size: var(--step-0);
-  opacity: 0;
-  animation: showText 0.5s 1s linear forwards;
-}
-@keyframes showText {
-  100%{
-    opacity: 1;
-  }
-}
-.skill-bars .bar .progress-line{
-  height: 10px;
-  width: 100%;
-  background: #f0f0f0;
-  position: relative;
-  transform: scaleX(0);
-  transform-origin: left;
-  border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
-  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-}
-@keyframes animate {
-  100%{
-    transform: scaleX(1);
-  }
-}
-.bar .progress-line span{
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--second-color);
-  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-}
-.bar .progress-line.html span{
-  width: 90%;
-}
-.bar .progress-line.css span{
-  width: 40%;
-}
-.bar .progress-line.office span{
-  width: 85%;
-}
-.bar .progress-line.r span{
-  width: 50%;
-}
-.bar .progress-line.bloomberg span{
-  width: 75%;
-}
-.bar .progress-line.eng span{
-  width: 90%;
-}
-.bar .progress-line.rus span{
-  width: 100%;
-}
-.progress-line span::before{
-  position: absolute;
-  content: "";
-  top: -10px;
-  right: 0;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-color: var(--second-color);
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-.progress-line span::after{
-  position: absolute;
-  top: -28px;
-  right: 0;
-  font-weight: 500;
-  background: var(--second-color);
-  color: #fff;
-  padding: 1px 8px;
-  font-size: var(--step-0);
-  border-radius: 3px;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-@keyframes showText2 {
-  100%{
-    opacity: 1;
-  }
-}
-.progress-line.html span::after{
-  content: "90%";
-}
-.progress-line.css span::after{
-  content: "40%";
-}
-.progress-line.office span::after{
-  content: "85%";
-}
-.progress-line.r span::after{
-  content: "50%";
-}
-.progress-line.bloomberg span::after{
-  content: "75%";
-}
-.progress-line.eng span::after{
-  content: "90%";
-}
-.progress-line.rus span::after{
-  content: "100%";
-}
-
-/* Footer */
-footer{
-  grid-area: footer;
-  background: var(--second-color);
-  margin-top: 25px;
-}
-footer p{
-  background: inherit;
-  color: white;
-}
-
-/* MOBILE */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .left, .right{
     margin: 0 5vw;
   }
 
-  body
-  {
-    background-color: #eceff1;
+  body{
     display: grid;
     grid-template-areas:
       'prof'
@@ -436,8 +543,66 @@ footer p{
       'educ'
       'exp'
       'footer';
-    background: #eceff1;
+    background: var(--ice-smoke);
     grid-row-gap: 2vw;
   }
 
+  .profile{
+    margin-top: 25px;
+  }
+
+  .list{
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+
+  .switch{
+    position: absolute;
+    top: 20px;
+    right: 5vw;
+    margin: 10px;
+    height: 35px;
+    width: 70px;
+  }
+}
+
+.day-night{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 20px;
+  height: 35px;
+  width: 70px;
+  background: url("day.jpg") no-repeat right top;
+  background-size: cover;
+}
+
+input:checked + .day-night {
+  background: url("night.jpg") no-repeat right top;
+  background-size: cover;
+}
+
+.day-night:before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 5%;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: white;
+  font-size: var(--step-2);
+  border-radius: 100%;
+}
+
+input:checked + .day-night:before {
+  left: calc(100% - 5%);
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+  font-size: var(--step-2);
+  background-color: var(--ice-smoke);
 }
