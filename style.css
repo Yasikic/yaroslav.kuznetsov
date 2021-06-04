@@ -231,9 +231,10 @@ footer p{
 }
 
 /* SOCIAL MEDIA */
-.fa-codepen  {color: #131417;}
-.fa-github   {color: #24292e;}
-.fa-linkedin {color: #0e76a8;}
+.fa-codepen        {color: #131417;}
+.fa-github         {color: #24292e;}
+.fa-linkedin       {color: #0e76a8;}
+.fa-free-code-camp {color: #006400;}
 
 /* SELECTION */
 ::selection{
