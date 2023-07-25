@@ -361,7 +361,7 @@ footer p{
   width: 100%;
 }
 .bar .progress-line.serb span{
-  width: 15%;
+  width: 30%;
 }
 .progress-line span::before{
   position: absolute;
@@ -429,7 +429,7 @@ footer p{
   content: "100%";
 }
 .progress-line.serb span::after{
-  content: "15%";
+  content: "30%";
 }
 
 /* UTOPIA FLUID TYPOGRAPHY */
