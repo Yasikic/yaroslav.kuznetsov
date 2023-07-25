@@ -327,6 +327,9 @@ footer p{
   background: var(--mdn-blue);
   animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
+.bar .progress-line.ppt span{
+  width: 80%;
+}
 .bar .progress-line.vba span{
   width: 30%;
 }
@@ -339,11 +342,14 @@ footer p{
 .bar .progress-line.css span{
   width: 40%;
 }
-.bar .progress-line.office span{
-  width: 85%;
+.bar .progress-line.excel span{
+  width: 90%;
 }
 .bar .progress-line.r span{
   width: 50%;
+}
+.bar .progress-line.word span{
+  width: 80%;
 }
 .bar .progress-line.bloomberg span{
   width: 75%;
@@ -353,6 +359,9 @@ footer p{
 }
 .bar .progress-line.rus span{
   width: 100%;
+}
+.bar .progress-line.serb span{
+  width: 15%;
 }
 .progress-line span::before{
   position: absolute;
@@ -386,6 +395,9 @@ footer p{
     opacity: 1;
   }
 }
+.progress-line.ppt span::after{
+  content: "80%";
+}
 .progress-line.vba span::after{
   content: "30%";
 }
@@ -398,11 +410,14 @@ footer p{
 .progress-line.css span::after{
   content: "40%";
 }
-.progress-line.office span::after{
-  content: "85%";
+.progress-line.excel span::after{
+  content: "90%";
 }
 .progress-line.r span::after{
   content: "50%";
+}
+.progress-line.word span::after{
+  content: "80%";
 }
 .progress-line.bloomberg span::after{
   content: "75%";
@@ -412,6 +427,9 @@ footer p{
 }
 .progress-line.rus span::after{
   content: "100%";
+}
+.progress-line.serb span::after{
+  content: "15%";
 }
 
 /* UTOPIA FLUID TYPOGRAPHY */
